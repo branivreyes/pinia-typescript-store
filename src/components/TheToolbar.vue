@@ -16,9 +16,10 @@ const redoHistory = ref<string[]>([])
 shoppingCart.$onAction(({ name, after, store }) => {
   if (name === 'fetchProducts') return
 
+  redoHistory.value = []
+
   if (name === 'clearStore') {
     undoHistory.value = ['[]']
-    redoHistory.value = []
     return
   }
 

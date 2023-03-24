@@ -118,7 +118,6 @@ function clearStore() {
           <v-col
             v-for="(product, index) in products"
             :key="`${category}-${index}`"
-            lg="2"
             md="3"
             sm="4"
           >
