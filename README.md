@@ -2,6 +2,8 @@
 
 Very basic shopping cart with undo and redo features.
 
+![Screenshot](https://github.com/branivreyes/pinia-typescript-store/blob/main/screenshot.png)
+
 ## Made with:
 
 - Vue.js 3
