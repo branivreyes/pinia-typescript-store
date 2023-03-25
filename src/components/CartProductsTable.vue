@@ -3,7 +3,7 @@ import type CartProduct from '@/classes/CartProduct'
 import type Product from '@/classes/Product'
 import TheCounter from '@/components/TheCounter.vue'
 
-const props = defineProps<{
+defineProps<{
   cartProducts: CartProduct[]
   total: number
 }>()
@@ -27,7 +27,7 @@ const emit = defineEmits<{
 
     <tbody>
       <tr
-        v-for="{ product, quantity, total } in props.cartProducts"
+        v-for="{ product, quantity, total } in cartProducts"
         :key="product.id"
       >
         <td>
@@ -67,7 +67,7 @@ const emit = defineEmits<{
         <td colspan="2"></td>
 
         <td colspan="2">
-          <strong>${{ props.total.toFixed(2) }}</strong>
+          <strong>${{ total.toFixed(2) }}</strong>
         </td>
       </tr>
     </tbody>

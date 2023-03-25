@@ -16,7 +16,7 @@ function doOperation(callback: (num: number) => number) {
 
 <template>
   <v-text-field
-    :model-value="props.modelValue"
+    :model-value="modelValue"
     @update:model-value="emit('update:modelValue', Number($event))"
     hide-details
     single-line
@@ -37,7 +37,7 @@ function doOperation(callback: (num: number) => number) {
         size="x-small"
         icon
         @click="doOperation((value) => value - 1)"
-        :disabled="props.modelValue === 0"
+        :disabled="modelValue === 0"
       >
         <v-icon color="green"> mdi-minus </v-icon>
       </v-btn>

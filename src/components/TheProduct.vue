@@ -2,7 +2,7 @@
 import TheCounter from './TheCounter.vue'
 import { ref } from 'vue'
 
-const props = defineProps<{
+defineProps<{
   image: string
   title: string
   price: number
@@ -35,16 +35,16 @@ function add() {
         rounded="0"
       >
         <v-img
-          :src="props.image"
+          :src="image"
           aspect-ratio="25/14"
           height="200"
         />
       </v-avatar>
     </v-row>
 
-    <v-card-title>{{ props.title }}</v-card-title>
+    <v-card-title>{{ title }}</v-card-title>
 
-    <v-card-subtitle>${{ props.price }}</v-card-subtitle>
+    <v-card-subtitle>${{ price }}</v-card-subtitle>
 
     <v-card-actions>
       <v-row>
